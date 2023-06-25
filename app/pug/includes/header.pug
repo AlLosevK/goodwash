@@ -1,5 +1,13 @@
 header.header
   .container
-    p Хедер
-    nav.header__nav
-      a.header__link Ссылка хедера
+    a.header__logo-link(href="/")
+      +icon("logo", "header__logo")
+    .header__socials
+      .header__socials-item
+        +icon("VK", "header__socials-ico")
+      .header__socials-item
+        +icon("Telegram", "header__socials-ico")
+      .header__socials-item
+        +icon("whatsapp", "header__socials-ico")
+  .container.header__nav
+    a.header__nav-link(href="/") главная

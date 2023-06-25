@@ -8,15 +8,17 @@ html
 
 
 body
-    margin: 0
-    font-family: 'Roboto', sans-serif
-    max-width: 100%
-    overflow-x: hidden
-    font-size: 18px
-    line-height: 21px
-    @include media-tablet
-      font-size: 13px
-      line-height: 150%
+  margin: 0
+  padding: calc(20 / 320)*100vw calc(10 / 320)*100vw
+  font-family: 'Montserrat', sans-serif
+  max-width: 100%
+  overflow-x: hidden
+  background-color: $bg
+  &.services-page
+    background-color: #fff
+
+  @include media-laptop
+    padding: calc(30 / 1440)*100vw
 
 h1,
 h2,
@@ -26,15 +28,61 @@ h5,
 h6
   padding: 0
   margin: 0
-  text-transform: uppercase
-
-h2
-  font-size: 36px
-  line-height: 42px
+  text-align: center
+  width: 100%
+  border-radius: 25px
+  border: 1px solid $main
+  font-size: calc(16 / 320)*100vw
   font-weight: bold
-  @include media-tablet
-    font-size: 18px
-    line-height: 120%
+  text-transform: none
+  color: $main
+
+  @include media-laptop
+    border: 2px solid $main
+    font-size: calc(30 / 1440)*100vw
+
+
+
+p
+  padding: 0
+  margin: 0
+
+section
+  margin-bottom: calc(10 / 320)*100vw
+  background-color: #fff
+  border-radius: 25px
+  padding: calc(10 / 320)*100vw
+  .link
+    background-color: $main
+    border-radius: 25px
+    width: 100%
+    height: calc(25 / 320)*100vw
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    a
+      text-decoration: none
+      color: #fff
+      font-weight: bold
+      font-size: calc(16 / 320)*100vw
+
+  @include media-laptop
+    margin-bottom: calc(30 / 1440)*100vw
+    padding: calc(20 / 1440)*100vw
+    .link
+      height: calc(50 / 1440)*100vw
+      a
+        font-size: calc(30 / 1440)*100vw
+
 
 img
     max-width: 100%
+
+main
+  padding: calc(10 / 320)*100vw 0 calc(30 / 320)*100vw
+
+  @include media-laptop
+    padding: calc(30 / 1440)*100vw 0 calc(45 / 1440)*100vw

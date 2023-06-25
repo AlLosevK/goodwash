@@ -1,0 +1,30 @@
+section.form
+  .container.fdc
+    h3.form__title оставить заявку
+    form.form__form
+      .form__item
+        label.form__label(for="name") имя
+        input#name(type="text" placeholder="Евгения")
+      .form__item
+        label.form__label(for="phone") телефон
+        input#phone(type="text" placeholder="+7 (900) 111 20-20")
+      .form__item
+        label.form__label() что хотите почистить?
+        select
+          option Диван
+          option неДиван
+      .form__item
+        label.form__label() есть застарелые пятна?
+        select
+          option Да
+          option неДа
+      .form__item
+        label.form__label() есть неприятный запах?
+        select
+          option Да
+          option неДа
+      .form__item
+        label.form__label(for="time") удобное время для связи
+        input#time(type="text" placeholder="+7 (900) 111 20-20")
+    .link
+      a.form__link(href="#") заказать

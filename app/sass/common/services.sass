@@ -1,0 +1,181 @@
+.services
+  padding: calc(10 / 320)*100vw
+  &__items
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin: calc(10 / 320)*100vw 0
+    width: 100%
+    flex-wrap: wrap
+  &__item
+    width: calc(135 / 320)*100vw
+    height: calc(135 / 320)*100vw
+    border-radius: calc(13 / 320)*100vw
+    padding: calc(10 / 320)*100vw
+    padding-bottom: calc(5 / 320)*100vw
+    // display: -webkit-flex
+    // display: -ms-flex
+    // display: flex
+    // flex-direction: column
+    // justify-content: space-between
+    // align-items: stretch
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: 23px 1fr 14px
+    gap: 10px
+    display: none
+    &:nth-child(1)
+      background-image: url('../images/dest/services-1.png')
+      background-size: cover
+      background-repeat: no-repeat
+      display: grid
+    &:nth-child(2)
+      background-image: url('../images/dest/services-2.png')
+      background-size: cover
+      background-repeat: no-repeat
+      display: grid
+    &:nth-child(3)
+      background-image: url('../images/dest/services-3.png')
+      background-size: cover
+      background-repeat: no-repeat
+    &:nth-child(4)
+      background-image: url('../images/dest/services-4.png')
+      background-size: cover
+      background-repeat: no-repeat
+    &:hover
+      background-image: none
+      background-color: $bg
+      div
+        visibility: visible
+    div
+      visibility: hidden
+  &__header
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+  &__title
+    &-item
+      color: $main
+      font-size: calc(10 / 320)*100vw
+      font-weight: bold
+      line-height: 110%
+      max-width: calc(81 / 320)*100vw
+      grid-row: 1/2
+      grid-column: 1/2
+    &-content
+      font-size: calc(6 / 320)*100vw
+      line-height: 110%
+      margin-bottom: calc(6 / 320)*100vw
+      position: relative
+      z-index: 100
+      line-height: 168%
+      min-height: 1px
+      &::before
+        content: ''
+        width: 101px
+        height: 1px
+        background-color: $main
+        position: absolute
+        bottom: -2px
+        left: -10px
+        z-index: 100
+  &__text
+    font-size: calc(5 / 320)*100vw
+    line-height: 110%
+  &__list
+    margin: 0
+    margin-top: calc(2 / 320)*100vw
+    padding-left: calc(6 / 320)*100vw
+    li
+      font-size: calc(5 / 320)*100vw
+      line-height: 140%
+  &__price
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    height: calc(22 / 320) * 100vw
+
+    p
+      color: $main
+      font-size: calc(6 / 320)*100vw
+      line-height: 110%
+      font-weight: bold
+      vertical-align: bottom
+      white-space: nowrap
+      &:nth-child(2)
+        margin-top: calc(4 / 320) *100vw
+    span
+      display: block
+      color: $main
+      font-weight: 400
+      font-size: calc(5 / 320)*100vw
+      white-space: nowrap
+  &__content
+  &__footer
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+  &__dots
+    height: calc(4 / 1440)*100vw
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    .icon-services-dots
+      font-size: calc(4 / 320) *100vw
+      width: calc(23 / 320) *100vw
+  &__astrisk
+    font-size: calc(5 / 320)*100vw
+    line-height: 110%
+    text-align: right
+
+  @include media-laptop
+    padding: calc(20 / 1440)*100vw
+    &__items
+      margin: calc(20 / 1440)*100vw 0
+    &__item
+      width: calc(320 / 1440)*100vw
+      height: calc(320 / 1440)*100vw
+      display: grid
+      padding: calc(23 / 1440)*100vw calc(20 / 1440)*100vw 7px
+      grid-template-rows: 57px 1fr 24px
+      border-radius: calc(25 / 1440)*100vw
+      gap: 10px
+    &__title
+      &-item
+        font-size: calc(24 / 1440)*100vw
+      &-content
+        font-size: calc(12 / 1440)*100vw
+        margin-bottom: calc(14 / 1440)*100vw
+    &__price
+      height: calc(60 / 1440)*100vw
+      p
+        font-size: calc(16 / 1440)*100vw
+      span
+        font-size: calc(12 / 1440)*100vw
+
+    &__text
+      font-size: calc(11 / 1440)*100vw
+    &__list
+      li
+        font-size: calc(11 / 1440)*100vw
+    &__dots
+      height: calc(12 / 1440)*100vw
+      width: calc(63.23 / 1440)*100vw
+      .icon-services-dots
+        font-size: calc(12 / 1440)*100vw
+    &__astrisk
+      font-size: calc(12 / 1440)*100vw

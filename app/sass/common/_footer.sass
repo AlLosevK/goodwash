@@ -1,2 +1,19 @@
-footer
-  background-color: #fac
+.footer
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  &__item
+    font-size: calc(12 / 320)*100vw
+    font-weight: bold
+    text-decoration: none
+    text-transform: uppercase
+    color: $main
+    &:hover
+      color: $mainO
+
+  @include media-laptop
+    &__item
+      font-size: calc(24 / 1440)*100vw

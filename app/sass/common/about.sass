@@ -1,0 +1,34 @@
+.about
+  &__content
+    padding-left: calc(20 / 320)*100vw
+    border-left: 3px solid $main
+    width: 100%
+    margin: calc(20 / 320)*100vw 0
+    p
+      margin-bottom: calc(14 / 320)*100vw
+      &:last-child
+        margin-bottom: 0
+
+  @include media-laptop
+    font-size: calc(24 / 1440)*100vw
+    .container
+      display: grid
+      grid-template-columns: auto 325px
+      grid-template-rows: 3.125vw 15.555vw
+    &__promo
+      grid-column: 1/3
+      grid-row: 1/2
+    &__content
+      padding-left: calc(20 / 1440)*100vw
+      margin: calc(22 / 1440)*100vw 0
+      grid-column: 1/2
+      grid-row: 2/3
+      p
+        margin-bottom: calc(50 / 1440)*100vw
+        &:last-child
+          margin-bottom: 0
+    .link
+      grid-column: 2/3
+      grid-row: 2/3
+      align-self: flex-end
+      // width: calc(324 / 1440)*100vw

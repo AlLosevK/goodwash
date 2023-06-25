@@ -48,7 +48,10 @@ function browsersync() {
 }
 
 function pugf() {
-	return src('app/pug/index.pug')
+	return src([
+		'app/pug/index.pug',
+		'app/pug/services.pug'
+	])
 	.pipe(pug({pretty: true}))
 	.pipe(dest('app/'))
 	.pipe(browserSync.stream())
@@ -66,7 +69,8 @@ function scripts() {
 }
 
 function styles() {
-	return src(['node_modules/bootstrap/dist/css/bootstrap.min.css',
+	return src([
+		// 'node_modules/bootstrap/dist/css/bootstrap.min.css',
 		'app/' + preprocessor + '/main.' + preprocessor + '']) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
 	.pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
 	.pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js

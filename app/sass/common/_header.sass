@@ -1,3 +1,109 @@
-header
-  ul
-    background-color: blue
+.header
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  gap: 10px
+  .container
+    width: 100%
+    border-radius: calc(25 / 320)*100vw
+    padding: calc(2 / 320)*100vw calc(10 / 320)*100vw
+    &:first-child
+      background-color: white
+      height: calc(40 / 320)*100vw
+      padding: calc(7 / 320)*100vw calc(10 / 320)*100vw
+  &__nav
+    background-color: $main
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      right: 10px
+      top: 50%
+      width: calc(15 / 320) * 100vw
+      height: calc(15 / 320) * 100vw
+      background-image: url('../images/dest/icons/arrow.svg')
+      background-size: cover
+      background-repeat: no-repeat
+      z-index: 100
+      transform: translateY(-50%) rotate(90deg)
+    &-link
+      margin: 0 auto
+      color: #fff
+      text-decoration: none
+      font-weight: bold
+      font-size: calc(16 / 320) * 100vw
+  &__socials
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    gap: calc(10 / 320)*100vw
+    width: calc(95 / 320)*100vw
+    &-item
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      .icon
+        width: calc(25 / 320)*100vw
+        height: calc(25 / 320)*100vw
+        font-size: calc(25 / 320)*100vw
+  &__logo
+    &-link
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+  .icon
+    &-logo
+      width: calc(120 / 320)*100vw
+      font-size: calc(16 / 320)*100vw
+
+  @include media-laptop
+    flex-wrap: wrap
+    gap: 20px
+    .container
+      width: calc(1360 / 2 / 1440)*100vw
+      padding: calc(6 / 1440)*100vw calc(20 / 1440)*100vw
+      &:first-child
+        padding: calc(10 / 1440)*100vw calc(20 / 1440)*100vw
+        height: auto
+    &__socials
+      width: calc(160 / 1440)*100vw
+      gap: calc(20 / 1440)*100vw
+      &-item
+        .icon
+          width: calc(40 / 1440)*100vw
+          height: calc(40 / 1440)*100vw
+          font-size: calc(40 / 1440)*100vw
+    &__nav
+      &:before
+        width: calc(40 / 1440)*100vw
+        height: calc(40 / 1440)*100vw
+        right: 20px
+      &-link
+        font-size: calc(36 / 1440)*100vw
+
+
+    .icon
+      &-logo
+        width: calc(200 / 1440)*100vw
+        font-size: calc(26 / 1440)*100vw
+
+
+.main-page
+  .header
+    .container
+      width: 100%
+  .header__nav
+    display: none
