@@ -5,21 +5,200 @@
     <title>Title your site</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
   </head>
-  <body>
-    <header>
-      <ul>
-        <li>Главная</li>
-        <li>О нас</li>
-        <li>Контакты</li>
-      </ul>
+  <body class="main-page">
+    <header class="header">
+      <div class="container"><a class="header__logo-link" href="/">
+              <svg class="icon icon-logo header__logo">
+                <use xlink:href="images/dest/sprite.svg#logo"></use>
+              </svg></a>
+        <div class="header__socials">
+          <div class="header__socials-item">
+                <svg class="icon icon-VK header__socials-ico">
+                  <use xlink:href="images/dest/sprite.svg#VK"></use>
+                </svg>
+          </div>
+          <div class="header__socials-item">
+                <svg class="icon icon-Telegram header__socials-ico">
+                  <use xlink:href="images/dest/sprite.svg#Telegram"></use>
+                </svg>
+          </div>
+          <div class="header__socials-item">
+                <svg class="icon icon-whatsapp header__socials-ico">
+                  <use xlink:href="images/dest/sprite.svg#whatsapp"></use>
+                </svg>
+          </div>
+        </div>
+      </div>
+      <div class="container header__nav"><a class="header__nav-link" href="/">главная</a></div>
     </header>
     <main class="main">
-      <h2>Раотает</h2>
+      <section class="banner">
+        <div class="container">
+          <picture>
+            <source srcset="images/dest/banner-laptop.png" media="(min-width: 1440px)"><img class="banner__promo" src="images/dest/banner.png">
+          </picture>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container fdc">
+          <h3 class="services__title">наши услуги</h3>
+          <div class="services__items">
+            <div class="services__item">
+              <div class="services__header">
+                <p class="services__title-item">ГЕНЕРАЛЬНАЯ УБОРКА</p>
+                <div class="services__price"> 
+                  <p>от 120 ₽/м²</p>
+                </div>
+              </div>
+              <div class="services__content">
+                <p class="services__title-content">Время выполнения 6-8 часов</p>
+                <p class="services__text">Это зависит от нескольких факторов:</p>
+                <ol class="services__list">
+                  <li>Вид уборки и степень загрязнения</li>
+                  <li>Квадратура помещения</li>
+                  <li>Дополнительные задачи: мытьё холодильника/микроволновой печи или духового шкафа и д.р.</li>
+                </ol>
+              </div>
+              <div class="services__footer">
+                <div class="services__dots">
+                      <svg class="icon icon-services-dots services__dots-ico">
+                        <use xlink:href="images/dest/sprite.svg#services-dots"></use>
+                      </svg>
+                </div><span class="services__astrisk">Доп. услуги не входят в стоимость</span>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__header">
+                <p class="services__title-item">ХИМЧИСТКА МАТРАСА</p>
+                <div class="services__price"> <span>двуспальный </span>
+                  <p>от 3 000 ₽</p>
+                </div>
+              </div>
+              <div class="services__content">
+                <p class="services__title-content">В стоимость услуг входит:</p>
+                <ol class="services__list">
+                  <li>Тщательная очистка поверхности от волос/шерсти, мусора и пыли</li>
+                  <li>Устранение всех возможных пятен</li>
+                  <li>Обработка всех поверхностей специальным раствором</li>
+                  <li>Глубокая промывка ткани от загрязнений с использованием химии</li>
+                </ol>
+              </div>
+              <div class="services__footer">
+                <div class="services__dots">
+                      <svg class="icon icon-services-dots services__dots-ico">
+                        <use xlink:href="images/dest/sprite.svg#services-dots"></use>
+                      </svg>
+                </div><span class="services__astrisk">Удаление сложных запахов +800 ₽</span>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__header">
+                <p class="services__title-item">ГЕНЕРАЛЬНАЯ УБОРКА</p>
+                <div class="services__price">
+                  <p>от 120 ₽/м²</p>
+                </div>
+              </div>
+              <div class="services__content">
+                <p class="services__title-content">Время выполнения 6-8 часов</p>
+                <p class="services__text">Это зависит от нескольких факторов:</p>
+                <ol class="services__list">
+                  <li>Вид уборки и степень загрязнения</li>
+                  <li>Квадратура помещения</li>
+                  <li>Дополнительные задачи: мытьё холодильника/микроволновой печи или духового шкафа, стирка + глажка белья и д.р.</li>
+                </ol>
+              </div>
+              <div class="services__footer">
+                <div class="services__dots">
+                      <svg class="icon icon-services-dots services__dots-ico">
+                        <use xlink:href="images/dest/sprite.svg#services-dots"></use>
+                      </svg>
+                </div><span class="services__astrisk">Доп. услуги не входят в стоимость</span>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__header">
+                <p class="services__title-item">ПОДДЕРЖИВАЮЩАЯ УБОРКА</p>
+                <div class="services__price">
+                  <p>от 150 ₽/м²</p>
+                </div>
+              </div>
+              <div class="services__content">
+                <p class="services__title-content">Время выполнения 8-10 часов</p>
+                <p class="services__text">Это зависит от нескольких факторов</p>
+                <ol class="services__list">
+                  <li>Вид уборки и степень загрязнения</li>
+                  <li>Квадратура помещения</li>
+                  <li>Дополнительные задачи: мытьё холодильника/микроволновой печи или духового шкафа, стирка + глажка белья и д.р.</li>
+                </ol>
+              </div>
+              <div class="services__footer">
+                <div class="services__dots">
+                      <svg class="icon icon-services-dots services__dots-ico">
+                        <use xlink:href="images/dest/sprite.svg#services-dots"></use>
+                      </svg>
+                </div><span class="services__astrisk">Доп. услуги не входят в стоимость</span>
+              </div>
+            </div>
+          </div>
+          <div class="link"><a href="/services.html">посмотреть все</a></div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="container fdc">
+          <h3 class="form__title">оставить заявку</h3>
+          <form class="form__form">
+            <div class="form__item">
+              <label class="form__label" for="name">имя</label>
+              <input id="name" type="text" placeholder="Евгения">
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="phone">телефон</label>
+              <input id="phone" type="text" placeholder="+7 (900) 111 20-20">
+            </div>
+            <div class="form__item">
+              <label class="form__label">что хотите почистить?</label>
+              <select>
+                <option>Диван</option>
+                <option>неДиван</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <label class="form__label">есть застарелые пятна?</label>
+              <select>
+                <option>Да</option>
+                <option>неДа</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <label class="form__label">есть неприятный запах?</label>
+              <select>
+                <option>Да</option>
+                <option>неДа</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="time">удобное время для связи</label>
+              <input id="time" type="text" placeholder="+7 (900) 111 20-20">
+            </div>
+          </form>
+          <div class="link"><a class="form__link" href="#">заказать</a></div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container fdc">
+          <h3 class="about__promo">о нас</h3>
+          <div class="about__content">
+            <p>Больше 5 лет опыта работы с различными загрязнениями.</p>
+            <p>Клининг и химчистка мебели</p>
+            <p>5000+ довольных клиентов</p>
+          </div>
+          <div class="link"><a class="about__link" href="/about">читать еще</a></div>
+        </div>
+      </section>
+      <script src="js/app.min.js"></script>
     </main>
-    <footer>
-      <p>Copyright(c)</p>
-    </footer>
+    <footer class="footer"><a class="footer__item" href="#">+7 (914) 758-48-48</a><a class="footer__item" href="#">GOODWASH@mail.com</a></footer>
   </body>
 </html>
